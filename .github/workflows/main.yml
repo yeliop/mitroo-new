@@ -24,7 +24,7 @@ jobs:
 
       - name: Compile, Unit Test and Install
         id: unit-tests
-        run: mvn -e clean install
+        run: mvn clean install
 
       - name: Upload test reports
         if: always() && steps.unit-tests.outcome == 'success'
